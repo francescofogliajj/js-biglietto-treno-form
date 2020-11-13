@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>biglietto-treno</title>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <h2>Calcola il prezzo del tuo biglietto</h2>
+      <div id="card-1">
+        <div class="row">
+          <div class="utente">
+            <label for="utente">Nome Cognome</label>
+            <input id="utente" type="text" name="" value="" placeholder="Nome Cognome">
+          </div>
+
+          <div class="chilometri">
+            <label for="chilometri">Km da percorrere</label>
+            <input id="chilometri" type="text" name="" value="" placeholder="Km da percorrere">
+          </div>
+
+          <div class="eta">
+            <label for="eta"> Fascia d'età</label>
+            <select id="eta" class="" name="">
+              <option value=""></option>
+              <option value="minorenne">Minorenne</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="over65">Over65</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <button id="genera" type="button" name="button">Genera</button>
+            <button id="annulla" type="button" name="button">Annulla</button>
+          </div>
+        </div>
+
+      </div>
+
+      <h2>Il tuo biglietto</h2>
+      <div id="card-2" class="hidden">
+        <h3>Dettaglio passeggeri</h3>
+        <div class="left">
+          <h3>Nome passeggero</h3>
+          <h4 id="passeggero"></h4>
+        </div>
+
+        <div class="right">
+          <table>
+            <tr>
+              <th>Offerta</th>
+              <th>Carrozza</th>
+              <th>Codice CP</th>
+              <th>Costo Biglietto</th>
+            </tr>
+            <tr>
+              <th id="offerta"></th>
+              <th id="carrozza"></th>
+              <th id="codice-cp"></th>
+              <th id="costo-biglietto"></th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
+
+  </body>
+</html>

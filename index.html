@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <title>biglietto-treno</title>
   </head>
@@ -10,6 +15,7 @@
 
     <div class="wrapper">
 
+      <!-- Calcola il prezzo del tuo biglietto -->
       <h2>Calcola il prezzo del tuo biglietto</h2>
       <div id="card-1">
         <div class="row">
@@ -20,52 +26,57 @@
 
           <div class="chilometri">
             <label for="chilometri">Km da percorrere</label>
-            <input id="chilometri" type="text" name="" value="" placeholder="Km da percorrere">
+            <input id="chilometri" type="number" min=0 name="" value="" placeholder="Km da percorrere">
           </div>
 
           <div class="eta">
-            <label for="eta"> Fascia d'età</label>
+            <label for="eta"> Fascia d'et&agrave;</label>
             <select id="eta" class="" name="">
               <option value=""></option>
               <option value="minorenne">Minorenne</option>
               <option value="maggiorenne">Maggiorenne</option>
-              <option value="over65">Over65</option>
+              <option value="over65">Over 65</option>
             </select>
-          </div>
-
-          <div class="row">
-            <button id="genera" type="button" name="button">Genera</button>
-            <button id="annulla" type="button" name="button">Annulla</button>
           </div>
         </div>
 
+        <div class="row">
+          <button id="genera" type="button" name="button">Genera</button>
+          <button id="annulla" type="button" name="button">Annulla</button>
+        </div>
       </div>
+      <!-- /Calcola il prezzo del tuo biglietto -->
 
+      <!-- Il tuo biglietto -->
       <h2>Il tuo biglietto</h2>
       <div id="card-2" class="hidden">
         <h3>Dettaglio passeggeri</h3>
-        <div class="left">
-          <h3>Nome passeggero</h3>
-          <h4 id="passeggero"></h4>
-        </div>
 
-        <div class="right">
-          <table>
-            <tr>
-              <th>Offerta</th>
-              <th>Carrozza</th>
-              <th>Codice CP</th>
-              <th>Costo Biglietto</th>
-            </tr>
-            <tr>
-              <th id="offerta"></th>
-              <th id="carrozza"></th>
-              <th id="codice-cp"></th>
-              <th id="costo-biglietto"></th>
-            </tr>
-          </table>
+        <div class="row">
+          <div class="left">
+            <h3>Nome passeggero</h3>
+            <h4 id="passeggero"></h4>
+          </div>
+
+          <div class="right">
+            <table>
+              <tr>
+                <th>Offerta</th>
+                <th>Carrozza</th>
+                <th>Codice CP</th>
+                <th>Costo Biglietto</th>
+              </tr>
+              <tr>
+                <td id="offerta"></td>
+                <td id="carrozza"></td>
+                <td id="codice-cp"></td>
+                <td id="costo-biglietto"></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
+      <!-- /Il tuo biglietto -->
 
     </div>
 
